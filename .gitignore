@@ -1,0 +1,26 @@
+*.class
+*.log
+.idea
+# sbt specific
+dist/*
+target/
+lib_managed/
+src_managed/
+project/project
+project/boot/
+project/plugins/project/
+.history
+.cache
+.lib/
+.bsp/
+
+.DS_Store
+
+.metals/
+.bloop/
+.ammonite/
+metals.sbt
+
+# dev output path
+local_joined/
+.vscode
