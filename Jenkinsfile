@@ -63,7 +63,7 @@ spec:
     GITHUB_CD_REPO = "sky-newCRM-datateam-airflow-cd"
     JFROG_FOLDER = "newcrm-datateam"
     APP_BASENAME = "bulk-preprocess"
-    CUSTOM_VERSION = "${env.BRANCH_NAME.replaceAll('[^a-zA-Z0-9-]+','-').take(45).toLowerCase()}-${git_short_commit}"
+    //CUSTOM_VERSION = "${env.BRANCH_NAME.replaceAll('[^a-zA-Z0-9-]+','-').take(45).toLowerCase()}-${git_short_commit}"
     //APP_VERSION = "${isRelease == true ? env.BRANCH_NAME : CUSTOM_VERSION}-${BUILD_NUMBER}"
     SCALA_VERSION = getScalaVersionFromBuildSbt()
     JAR_VERSION = getJarVersionFromBuildSbt()
