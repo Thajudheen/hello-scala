@@ -80,7 +80,7 @@ spec:
         container('builder') {
           sh 'debug'
           sh 'master value is :${isMaster}'
-          sh "sbt jacoco"
+          //sh "sbt jacoco"
           //sh "cp target/scala-${SCALA_VERSION}/jacoco/report/jacoco.xml jacoco.xml"
         }
       }
