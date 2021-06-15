@@ -77,12 +77,11 @@ spec:
   stages {
     stage('Coverage') {
       steps {
-          println("debug")
-          echo "Master value is : ${isMaster}"
-          echo "App version is : ${APP_VERSION}"
         container('builder') {
+          sh 'debug'
+          sh 'master value is :${isMaster}'
           sh "sbt jacoco"
-          sh "cp target/scala-${SCALA_VERSION}/jacoco/report/jacoco.xml jacoco.xml"
+          //sh "cp target/scala-${SCALA_VERSION}/jacoco/report/jacoco.xml jacoco.xml"
         }
       }
     }
