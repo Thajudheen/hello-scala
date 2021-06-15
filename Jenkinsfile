@@ -76,10 +76,10 @@ spec:
 
   stages {
     stage('Coverage') {
-         println("Debug")
-         println("Scala version : ${SCALA_VERSION}")
       steps {
         container('builder') {
+          println("Debug")
+          println("Scala version : ${SCALA_VERSION}")
           sh "sbt jacoco"
           //sh "cp target/scala-${SCALA_VERSION}/jacoco/report/jacoco.xml jacoco.xml"
         }
