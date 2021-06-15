@@ -77,9 +77,9 @@ spec:
   stages {
     stage('Coverage') {
       steps {
-    	println("debug")
-    	println("master value: ${isMaster}")
         container('builder') {
+          println("debug")
+    	    println("master value: ${isMaster}")
           echo "$isMaster"
           echo "$APP_VERSION"
           sh "sbt jacoco"
