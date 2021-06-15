@@ -57,7 +57,7 @@ spec:
 
   environment {
     isRelease = (env.BRANCH_NAME =~ /^v[0-9]+\.[0-9]+\.[0-9]+$/).matches()
-    isMaster = (env.BRANCH_NAME =~ /master/).matches()
+    isMaster = (env.BRANCH_NAME =~ /main/).matches()
     useSandbox = "${isRelease == false && isMaster == false }"
     git_short_commit = getShortCommitHash()
     GITHUB_CD_REPO = "sky-newCRM-datateam-airflow-cd"
